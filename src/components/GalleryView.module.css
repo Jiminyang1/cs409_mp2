@@ -1,0 +1,190 @@
+.container {
+  width: 100%;
+}
+
+.title {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.filterContainer {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.searchSection {
+  margin-bottom: 1.5rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #FF3D3D;
+}
+
+.typeSection {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1.5rem;
+}
+
+.typeSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filterTitle {
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0;
+}
+
+.clearButton {
+  padding: 0.5rem 1rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.clearButton:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.typeCheckboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.checkboxLabel:hover {
+  background-color: #f5f5f5;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #FF3D3D;
+}
+
+.typeLabel {
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: white;
+  flex: 1;
+  text-align: center;
+}
+
+/* Pokemon Type Colors */
+.typeLabel.normal { background-color: #A8A878; }
+.typeLabel.fire { background-color: #F08030; }
+.typeLabel.water { background-color: #6890F0; }
+.typeLabel.electric { background-color: #F8D030; color: #333; }
+.typeLabel.grass { background-color: #78C850; }
+.typeLabel.ice { background-color: #98D8D8; }
+.typeLabel.fighting { background-color: #C03028; }
+.typeLabel.poison { background-color: #A040A0; }
+.typeLabel.ground { background-color: #E0C068; }
+.typeLabel.flying { background-color: #A890F0; }
+.typeLabel.psychic { background-color: #F85888; }
+.typeLabel.bug { background-color: #A8B820; }
+.typeLabel.rock { background-color: #B8A038; }
+.typeLabel.ghost { background-color: #705898; }
+.typeLabel.dragon { background-color: #7038F8; }
+.typeLabel.dark { background-color: #705848; }
+.typeLabel.steel { background-color: #B8B8D0; }
+.typeLabel.fairy { background-color: #EE99AC; }
+
+.resultsCount {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.filterInfo {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.loading,
+.error,
+.noResults {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.error {
+  background-color: rgba(244, 67, 54, 0.2);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .typeCheckboxes {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .typeSectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

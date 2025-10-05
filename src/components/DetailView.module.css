@@ -1,0 +1,328 @@
+.container {
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.backButton {
+  padding: 0.6rem 1.2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #FF3D3D;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.backButton:hover {
+  background-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.id {
+  font-size: 1.5rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.mainInfo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.imageSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 300px;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 250px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.noImage {
+  color: #999;
+  font-size: 1.2rem;
+}
+
+.detailsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detailGroup {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  color: #FF3D3D;
+  margin: 0 0 0.75rem 0;
+}
+
+.types {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  min-height: 40px;
+}
+
+.type {
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* Pokemon Type Colors */
+.type.normal { background-color: #A8A878; }
+.type.fire { background-color: #F08030; }
+.type.water { background-color: #6890F0; }
+.type.electric { background-color: #F8D030; color: #333; }
+.type.grass { background-color: #78C850; }
+.type.ice { background-color: #98D8D8; }
+.type.fighting { background-color: #C03028; }
+.type.poison { background-color: #A040A0; }
+.type.ground { background-color: #E0C068; }
+.type.flying { background-color: #A890F0; }
+.type.psychic { background-color: #F85888; }
+.type.bug { background-color: #A8B820; }
+.type.rock { background-color: #B8A038; }
+.type.ghost { background-color: #705898; }
+.type.dragon { background-color: #7038F8; }
+.type.dark { background-color: #705848; }
+.type.steel { background-color: #B8B8D0; }
+.type.fairy { background-color: #EE99AC; }
+
+.abilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 90px;
+  overflow-y: auto;
+}
+
+.ability {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.hiddenAbility {
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}
+
+.attributes {
+  display: flex;
+  gap: 2rem;
+  min-height: 60px;
+}
+
+.attribute {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.attributeLabel {
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.attributeValue {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stat {
+  display: grid;
+  grid-template-columns: 140px 1fr 60px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statName {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.statBar {
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.statFill {
+  height: 100%;
+  background: linear-gradient(90deg, #FF3D3D 0%, #FF6B35 100%);
+  transition: width 0.5s ease;
+  width: var(--stat-width, 0%);
+}
+
+.statValue {
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+}
+
+.navigationButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #e0e0e0;
+  min-height: 60px;
+}
+
+.navButton {
+  padding: 0.8rem 2rem;
+  background-color: #FF3D3D;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navButton:hover:not(:disabled) {
+  background-color: #FF6B35;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.positionInfo {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+}
+
+.loading {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.error {
+  color: white;
+  background-color: rgba(244, 67, 54, 0.2);
+  border-radius: 12px;
+}
+
+@media (max-width: 968px) {
+  .mainInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .imageSection {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .id {
+    font-size: 1.5rem;
+  }
+
+  .stat {
+    grid-template-columns: 100px 1fr 50px;
+    gap: 0.5rem;
+  }
+
+  .navigationButtons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navButton {
+    width: 100%;
+  }
+}
+
