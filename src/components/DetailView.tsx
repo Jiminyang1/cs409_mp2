@@ -105,10 +105,10 @@ const DetailView: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.navigation}>
         <button className={styles.backButton} onClick={handleBackToGallery}>
-          ← Gallery
+          Gallery
         </button>
         <button className={styles.backButton} onClick={handleBackToList}>
-          ← List
+          List
         </button>
       </div>
 
@@ -219,7 +219,7 @@ const DetailView: React.FC = () => {
               onClick={handlePrevious}
               disabled={currentIndex <= 0}
             >
-              ← Previous
+              Previous
             </button>
             <span className={styles.positionInfo}>
               {currentIndex + 1} of {pokemonList.length}
@@ -229,7 +229,7 @@ const DetailView: React.FC = () => {
               onClick={handleNext}
               disabled={currentIndex >= pokemonList.length - 1}
             >
-              Next →
+              Next
             </button>
           </div>
         )}
